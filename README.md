@@ -6,3 +6,5 @@ This is a suite of 4 basic tests for the Hudl login page.
 2. Testing a Log Out
 3. Testing Login with Invalid Email and Password
 4. Testing Login when No Email or Password are given
+
+Attempting to show I'm comfortable writing scripts in different formats as needed.

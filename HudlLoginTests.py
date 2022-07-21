@@ -7,8 +7,8 @@ import time
 
 """Testing Login with Valid Email and Password"""
 
-emailStr = 'jakadekapinos@gmail.com'
-passwordStr = 'P!tthockey9'
+emailStr = 'ENTER A VALID E-MAIL ADDRESS'
+passwordStr = 'ENTER YOUR PASSWORD'
 
 # Open browser to hudl
 driver = webdriver.Chrome(ChromeDriverManager().install())
@@ -188,72 +188,3 @@ if __name__ == '__main__':
 
     object = NoEmailOrPasswordProvided()
     object.main()
-
-"""Script to Test 'Remember Me' checkbox and functionality"""
-
-# class RememberMeLogin:
-#
-#     url = 'https://www.hudl.com/'
-#     valid_email = 'jakadekapinos@gmail.com'
-#     valid_password = 'P!tthockey9'
-#
-#     # Open browser
-#     def __init__(self):
-#         self.driver = webdriver.Chrome(ChromeDriverManager().install())
-#         self.driver.implicitly_wait(10)
-#         self.driver.maximize_window()
-#
-#     # Navigate to Hudl
-#     def go_to_url(self):
-#         self.driver.get(self.url)
-#
-#     # Find and select 'Log In' button
-#     def go_to_login(self):
-#         self.driver.find_element(By.CSS_SELECTOR,
-#                                  'body > div.outer > header > div > a.mainnav__btn.mainnav__btn--primary').click()
-#
-#     # Enter a valid email
-#     def input_email(self):
-#         field = self.driver.find_element(By.ID, 'email')
-#         field.send_keys(self.valid_email)
-#
-#     # Enter a valid password
-#     def input_password(self):
-#         field = self.driver.find_element(By.ID, 'password')
-#         field.send_keys(self.valid_password)
-#
-#     # Click 'Remember Me' checkbox
-#     def click_remember_me(self):
-#         self.driver.find_element(By.CSS_SELECTOR,
-#                                  '#app > section > div.styles_pageContainer_31NnIgZuiQzDKnKlPaGLsi > div > form > div > div.styles_footerContainer_bNIg7bOb-wpsYiG0CCy0M > div > label > svg > rect.uni-form__check-indicator__background').click()
-#
-#     # Submit 'Log In' button
-#     def click_login(self):
-#         self.driver.find_element(By.ID, 'logIn').click()
-#
-#     # Verify if the error message is displayed and validate user isn't logged in
-#     def verify_error_message(self):
-#         try:
-#             self.driver.find_element(By.CSS_SELECTOR,
-#                                      '#app > section > div.styles_pageContainer_31NnIgZuiQzDKnKlPaGLsi > div > form > div > div.styles_errorDisplayContainer_3nEnTm0RU51coAPEZflqgB.styles_fadeInAndExpand_3sKGRFzwMPUqIvcy9T4nFM > div > p')
-#             print('Invalid email and/or password.')
-#             return False
-#         except NoSuchElementException:
-#             print('Login successful!')
-#             return True
-#
-#     def main(self):
-#         self.go_to_url()
-#         self.go_to_login()
-#         self.input_email()
-#         self.input_password()
-#         self.click_remember_me()
-#         self.click_login()
-#         time.sleep(3)
-#         self.verify_error_message()
-#         self.driver.quit()
-#
-#
-# if __name__ == '__main__':
-#     object = RememberMeLogin()
-#     object.main()
